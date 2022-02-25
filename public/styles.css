@@ -1,0 +1,16 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+    margin: 20px;
+    padding: 0;
+}
+
+h1 {
+    color: crimson;
+}
+
+p {
+    font-size: large;
+}
+
+
