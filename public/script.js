@@ -2,9 +2,20 @@ flag = false
 cou = 1000
 
 btn = document.getElementById('btn')
-cnt = document.getElementById('cnt')
 hwan = document.getElementById('hwan')
 tex = document.getElementById('tex')
+root = document.getElementById('root')
+
+smle = ['=)', ':)', ';)', '*)', '\'v\'', ';j', 'xD', '^ ^']
+fanta = [
+    'Times New Roman',
+    'Verdana',
+    'Calibri',
+    'Arial',
+    'MS Trebuchet',
+    'Geneva',
+    'Tahoma'
+]
 
 function rint(lo, hi) {
     return lo + Math.floor(Math.random() * (hi + 1 - lo))
@@ -21,17 +32,28 @@ btn.addEventListener('click', () => {
     // flag = !flag
 
     cou -= 7
-    cnt.innerHTML = cou
 
-    cnt.style.fontSize = (1001 - cou) / 3 + 'px'
+    btn.innerHTML = cou + ' ' + smle[rint(0, smle.length-1)]
+    if (cou < 7) {
+        btn.innerHTML = '%%%%%%%%%%%%%%'
+    }
+    btn.style.fontSize = 20 + (1001 - cou) / 3 + 'px'
+    btn.style.fontFamily = fanta[rint(0, fanta.length-1)]
 
     if (cou < 1) {
         hwan.innerHTML = "ZXC"
-        tex.innerHTML = "zxczxx czxccz xzz xczxc zxczxcz  czxczxczxczx zcxcz czx czczcx zxzxcc zxc zxcxzccxz xxxxzcxzxczxxxxz cxzxz xczxczx zcxzx ccxc zxcxczxc xcxczxczcz xzcxzczzxxzc xzxcxzxzxc xzzxc zcxzxxxccc czxxczczx xczxczxzzx cczxcczx zx cczzxczxcczx czxczx cxz".repeat(1000)
+        tex.innerHTML = "zxczxx czxccz xzz xczxc zxczxcz  czxczxczxczx zcxcz czx czczcx zxzxcc zxc zxcxzccxz xxxxzcxzxczxxxxz cxzxz xczxczx zcxzx ccxc zxcxczxc xcxczxczcz xzcxzczzxxzc xzxcxzxzxc xzzxc zcxzxxxccc czxxczczx xczxczxzzx cczxcczx zx cczzxczxcczx czxczx cxz".repeat(2000)
         hwan.style.display = 'none'
         btn.style.display = 'none'
-        cnt.style.display = 'none'
-        tex.style.fontSize = '5px'
+        tex.style.fontSize = '3px'
+
+        tex.requestFullscreen()
+            .then(function() {
+                // element has entered fullscreen mode successfully
+            })
+            .catch(function(error) {
+                // element could not enter fullscreen mode
+            });
         
         setInterval(death, 5)
 

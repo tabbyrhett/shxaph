@@ -17,12 +17,10 @@ p {
     font-size: large;
 }
 
-#cnt {
-    font-size: 24px;
-}
-
 #btn {
-    font-size: 100px;
+    font-size: 240px;
+    color: crimson;
+    background-color: black;
 }
 
 .noselect {
