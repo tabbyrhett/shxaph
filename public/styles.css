@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: aliceblue;
+    background-color: rgb(216, 146, 146);
 }
 
 h1 {
@@ -21,6 +21,12 @@ p {
     font-size: 240px;
     color: crimson;
     background-color: black;
+}
+
+#hwan {
+
+    text-align: center
+    
 }
 
 .noselect {
